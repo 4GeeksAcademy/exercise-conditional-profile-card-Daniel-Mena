@@ -29,17 +29,17 @@ function render(variables = {}) {
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
-  let name = variables.name === null ? " " : variables.name;
-  let lastName = variables.lastName === null ? " " : variables.lastName;
+  let name = variables.name === null ? "Nombre" : variables.name;
+  let lastName = variables.lastName === null ? "" : variables.lastName;
   let twitter = variables.twitter === null ? " " : variables.twitter;
   let position =
     variables.socialMediaPosition == "position-right" ? "right" : "left";
   let github = variables.github === null ? " " : variables.github;
   let linkedin = variables.linkedin === null ? " " : variables.linkedin;
-  let instagram = variables.instagram === null ? " " : variables.instagram;
-  let role = variables.role === null ? " " : variables.role;
-  let city = variables.city === null ? " " : variables.city + ",";
-  let country = variables.country === null ? " " : variables.country;
+  let instagram = variables.instagram === null ? "" : variables.instagram;
+  let role = variables.role === null ? "Profesión" : variables.role;
+  let city = variables.city === null ? "Ciudad," : variables.city + ",";
+  let country = variables.country === null ? "Pais" : variables.country;
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
